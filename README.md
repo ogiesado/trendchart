@@ -1,2 +1,0 @@
-# trendchart
-Created with CodeSandbox

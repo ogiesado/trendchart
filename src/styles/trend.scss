@@ -1,0 +1,71 @@
+.trend {
+  display: flex;
+  align-items: center;
+  position: relative;
+  font-size: 14px;
+  margin: 10px 0;
+
+  &::after {
+    content: '';
+    left: 0;
+    top: 0px;
+    position: absolute;
+    border-radius: 3px;
+    height: 14px;
+    width: 14px;
+    background-color: #fff;
+    border: 2px solid #5a5a5a;
+    z-index: 0;
+  }
+
+  &--checked::after {
+    background-color: #5a5a5a;
+  }
+
+  &--checked::before {
+    border-left: 3px solid #fff;
+    border-bottom: 3px solid #fff;
+    border-radius: 1px;
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: 2px;
+    width: 12px;
+    height: 4px;
+    z-index: 1;
+    transform: rotateZ(-45deg);
+    transform-origin: 100% 100%;
+  }
+
+  &__checkbox {
+    width: 14px;
+    height: 14px;
+    visibility: hidden;
+    z-index: 1;
+  }
+
+  &__title {
+    padding-left: 30px;
+
+    &::before {
+      content: '';
+      left: 25px;
+      top: 9px;
+      position: absolute;
+      width: 20px;
+      border-bottom: 2px #627379;
+    }
+
+    &--fhr::before {
+      border-bottom-style: solid;
+    }
+
+    &--sim::before {
+      border-bottom-style: dashed;
+    }
+
+    &--chs::before {
+      border-bottom-style: dotted;
+    }
+  }
+}

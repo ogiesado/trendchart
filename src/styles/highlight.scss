@@ -1,0 +1,45 @@
+.highlight {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  margin-top: 5px;
+
+  &__score-wrapper {
+    display: flex;
+    margin: 3px 0;
+  }
+
+  &__score {
+    color: #333;
+    font-size: 18px;
+    margin-right: 5px;
+  }
+
+  &__difference {
+    font-size: 9px;
+    position: relative;
+    align-self: flex-end;
+    margin-bottom: 7px;
+
+    &::after {
+      position: absolute;
+      bottom: -10px;
+      left: 0px;
+      font-size: 10px;
+    }
+
+    &--up::after {
+      content: '˄';
+    }
+
+    &--down::after {
+      content: '˅';
+    }
+
+    &--same::after {
+      content: '—';
+      bottom: -8px;
+      left: -1px;
+    }
+  }
+}
